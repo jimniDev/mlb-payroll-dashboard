@@ -40,12 +40,13 @@ const OverviewTab = ({ yearlyData, selectedYear }) => {
   );
   
   return (
-    <div>
+    <div className="grid gap-6">
     <TableauViz
     vizUrl="https://public.tableau.com/views/TeamSuccessSankeyChart/Sheet1"
-    title="MLB Team Performance Metrics"
     height={650}
     />
+
+
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
  
       <TeamPayrollChart data={sortedData} />
@@ -56,9 +57,15 @@ const OverviewTab = ({ yearlyData, selectedYear }) => {
         totalSpending={alTotalSpending + nlTotalSpending} 
       /> */}
     </div>
+    {/* <div className="flex justify-center">
+          <img 
+            src="/Position Glossery.jpg" 
+            alt="MLB Banner" 
+            className="max-w-full h-auto rounded"
+          />
+        </div> */}
     <TableauViz
     vizUrl="https://public.tableau.com/views/ParallelCoordinatesVisualization/Sheet1"
-    title="MLB Team Performance Metrics"
     height={500}
     />
     </div>

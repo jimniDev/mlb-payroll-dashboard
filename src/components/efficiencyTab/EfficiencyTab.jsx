@@ -57,11 +57,10 @@ const EfficiencyTab = ({ summaryData, leagueFilter, setLeagueFilter, data }) => 
   ];
   
   return (
-    <div>
+    <div className="grid gap-6">
            <TableauViz
     vizUrl="https://public.tableau.com/views/MLBSpendingvsWinsEfficiencyMatrix/SpendvsWins"
-    title="MLB Team Performance Metrics"
-    height={500}
+    height={550}
     />
     
       <LeagueFilter 
@@ -93,10 +92,23 @@ const EfficiencyTab = ({ summaryData, leagueFilter, setLeagueFilter, data }) => 
         />
       </div>
 
+      <div className="grid grid-cols-1 lg:grid-cols-1 gap-6">
+       <TableauViz
+    vizUrl="https://public.tableau.com/views/MLBSpendingWARbyPosition2024/LeagueAvgPositionalSpendvs_WAR"
+    height={500}
+    />
+    <div className="grid grid-cols-1 lg:grid-cols-1 gap-6">
+        <p>
+        <b>Wins Above Replacement (WAR)</b> is a comprehensive statistic that estimates a baseball player's total value to their team. It calculates how many more wins a player contributes compared to a replacement-level player, who represents the caliber of talent readily available, such as minor leaguers or bench players.
+A higher WAR indicates a greater positive impact on the team's success.
+There are multiple frameworks of WAR frequently used in baseball analytics and discussion. We have decided to use Baseball Reference's version, which is one of the most popular and reported by ESPN in their MLB content.
+        </p>
+    </div>
+    </div>
+
       <div className="grid grid-cols-1 gap-6">
       <TableauViz
     vizUrl="https://public.tableau.com/views/MLBPayrollAllocationvsWins/PayrollAllocationvsWins"
-    title="MLB Team Performance Metrics"
     height={500}
     />
     </div>

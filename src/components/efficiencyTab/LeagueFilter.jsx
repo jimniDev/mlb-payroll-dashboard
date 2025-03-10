@@ -3,7 +3,7 @@ import React from 'react';
 
 const LeagueFilter = ({ leagueFilter, setLeagueFilter, filteredCount }) => {
   return (
-    <div className="mb-6 flex justify-between items-center">
+    <div className="flex justify-between items-center">
       <div className="flex space-x-2">
         <button
           className={`px-3 py-1 rounded ${leagueFilter === 'All' ? 'bg-blue-600 text-white' : 'bg-gray-200 text-gray-700'}`}
