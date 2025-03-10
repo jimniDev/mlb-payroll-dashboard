@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/mlb-payroll-dashboard/static/css/main.4f56c45c.css",
-    "main.js": "/mlb-payroll-dashboard/static/js/main.c4d2bd9d.js",
+    "main.css": "/mlb-payroll-dashboard/static/css/main.ab0517f2.css",
+    "main.js": "/mlb-payroll-dashboard/static/js/main.80147acd.js",
     "static/js/488.0162fb96.chunk.js": "/mlb-payroll-dashboard/static/js/488.0162fb96.chunk.js",
     "index.html": "/mlb-payroll-dashboard/index.html",
-    "main.4f56c45c.css.map": "/mlb-payroll-dashboard/static/css/main.4f56c45c.css.map",
-    "main.c4d2bd9d.js.map": "/mlb-payroll-dashboard/static/js/main.c4d2bd9d.js.map",
+    "main.ab0517f2.css.map": "/mlb-payroll-dashboard/static/css/main.ab0517f2.css.map",
+    "main.80147acd.js.map": "/mlb-payroll-dashboard/static/js/main.80147acd.js.map",
     "488.0162fb96.chunk.js.map": "/mlb-payroll-dashboard/static/js/488.0162fb96.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.4f56c45c.css",
-    "static/js/main.c4d2bd9d.js"
+    "static/css/main.ab0517f2.css",
+    "static/js/main.80147acd.js"
   ]
 }
