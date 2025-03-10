@@ -5,6 +5,7 @@ import SpendingEfficiencyChart from './SpendingEfficiencyChart';
 import PerformanceMatrixChart from './PerformanceMatrixChart';
 import EfficiencyDistributionChart from './EfficiencyDistributionChart';
 import EfficiencyStats from './EfficiencyStats';
+import TableauViz from '../common/TableauViz';
 import _ from 'lodash';
 
 const EfficiencyTab = ({ summaryData, leagueFilter, setLeagueFilter, data }) => {
@@ -57,11 +58,18 @@ const EfficiencyTab = ({ summaryData, leagueFilter, setLeagueFilter, data }) => 
   
   return (
     <div>
+           <TableauViz
+    vizUrl="https://public.tableau.com/views/MLBSpendingvsWinsEfficiencyMatrix/SpendvsWins"
+    title="MLB Team Performance Metrics"
+    height={500}
+    />
+    
       <LeagueFilter 
         leagueFilter={leagueFilter} 
         setLeagueFilter={setLeagueFilter}
         filteredCount={filteredData.length}
       />
+
       
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         <SpendingEfficiencyChart 
@@ -69,13 +77,13 @@ const EfficiencyTab = ({ summaryData, leagueFilter, setLeagueFilter, data }) => 
           avgLeagueCostPerWin={avgLeagueCostPerWin} 
         />
         
-        <PerformanceMatrixChart 
+        {/* <PerformanceMatrixChart 
           filteredData={filteredData} 
           avgLeaguePayroll={avgLeaguePayroll} 
           avgLeagueWins={avgLeagueWins} 
-        />
+        /> */}
         
-        <EfficiencyDistributionChart quadrantSummary={quadrantSummary} />
+        {/* <EfficiencyDistributionChart quadrantSummary={quadrantSummary} /> */}
         
         <EfficiencyStats 
           avgLeaguePayroll={avgLeaguePayroll}
@@ -84,6 +92,14 @@ const EfficiencyTab = ({ summaryData, leagueFilter, setLeagueFilter, data }) => 
           sortedTeams={sortedTeams}
         />
       </div>
+
+      <div className="grid grid-cols-1 gap-6">
+      <TableauViz
+    vizUrl="https://public.tableau.com/views/MLBPayrollAllocationvsWins/PayrollAllocationvsWins"
+    title="MLB Team Performance Metrics"
+    height={500}
+    />
+    </div>
     </div>
   );
 };

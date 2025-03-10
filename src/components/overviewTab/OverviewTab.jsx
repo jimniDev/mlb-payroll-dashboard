@@ -4,6 +4,7 @@ import TeamPayrollChart from './TeamPayrollChart';
 import SpendingVsPerformanceChart from './SpendingVsPerformanceChart';
 import DivisionComparisonChart from './DivisionComparisonChart';
 import LeagueSpendingChart from './LeagueSpendingChart';
+import TableauViz from '../common/TableauViz';
 import _ from 'lodash';
 
 const OverviewTab = ({ yearlyData, selectedYear }) => {
@@ -39,15 +40,29 @@ const OverviewTab = ({ yearlyData, selectedYear }) => {
   );
   
   return (
+    <div>
+    <TableauViz
+    vizUrl="https://public.tableau.com/views/TeamSuccessSankeyChart/Sheet1"
+    title="MLB Team Performance Metrics"
+    height={650}
+    />
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+ 
       <TeamPayrollChart data={sortedData} />
       <SpendingVsPerformanceChart data={currentYearData} />
-      <DivisionComparisonChart data={divisionData} />
-      <LeagueSpendingChart 
+      {/* <DivisionComparisonChart data={divisionData} /> */}
+      {/* <LeagueSpendingChart 
         data={leagueSpendingData} 
         totalSpending={alTotalSpending + nlTotalSpending} 
-      />
+      /> */}
     </div>
+    <TableauViz
+    vizUrl="https://public.tableau.com/views/ParallelCoordinatesVisualization/Sheet1"
+    title="MLB Team Performance Metrics"
+    height={500}
+    />
+    </div>
+
   );
 };
 
