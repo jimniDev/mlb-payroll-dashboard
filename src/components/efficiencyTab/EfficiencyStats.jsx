@@ -19,7 +19,7 @@ const EfficiencyStats = ({ avgLeaguePayroll, avgLeagueWins, avgLeagueCostPerWin,
         </div>
       </div>
       <div className="p-3 bg-gray-50 rounded-lg">
-        <h4 className="text-md font-semibold mb-2">Most Efficient Teams</h4>
+        <h4 className="text-md font-semibold mb-2">Lowest Cost Per Win Teams</h4>
         <div className="space-y-2">
           {sortedTeams.slice(0, 3).map((team, index) => (
             <div key={index} className="flex items-center justify-between">
@@ -29,9 +29,14 @@ const EfficiencyStats = ({ avgLeaguePayroll, avgLeagueWins, avgLeagueCostPerWin,
                 </span>
                 <span>{team.team}</span>
               </div>
-              <span className="font-semibold">
-                ${(team.avgCostPerWin / 1000000).toFixed(2)}M/win
-              </span>
+              <div className="text-right">
+                <span className="font-semibold">
+                  ${(team.avgCostPerWin / 1000000).toFixed(2)}M/win
+                </span>
+                <span className="block text-xs text-gray-500">
+                  {Math.round(team.avgWins)} wins/season
+                </span>
+              </div>
             </div>
           ))}
         </div>

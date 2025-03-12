@@ -25,7 +25,7 @@ const EfficiencyChartsContainer = ({ summaryData }) => {
   return (
     <div className="bg-white p-4 rounded shadow-sm">
       <div className="flex justify-between items-center mb-4">
-        <h3 className="text-lg font-medium text-gray-700">Team Spending Efficiency Analysis</h3>
+        <h3 className="text-lg font-medium text-gray-700">Cost per Win Analysis</h3>
 
         {/* League filter buttons */}
         <div className="flex space-x-2">
@@ -50,7 +50,9 @@ const EfficiencyChartsContainer = ({ summaryData }) => {
         </div>
       </div>
 
-      <div className="text-sm text-gray-600 mb-2">Showing {filteredData.length} teams</div>
+      <div className="text-sm text-gray-600 mb-2">
+        <p>Showing {filteredData.length} teams</p>
+      </div>
 
       {/* Grid for the two charts we want to control together */}
       <div className="grid grid-cols-1 lg:grid-cols-10 gap-6 mt-4">
