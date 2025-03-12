@@ -251,16 +251,18 @@ const BaseballFieldDiagram = () => {
       </div>
 
       {/* Position Information Box */}
-      <div className="mt-4 text-center text-sm text-gray-600">
+      <div className="mt-4 text-center font-light text-sm text-gray-600">
         Click on any position to learn more about it
       </div>
       {selectedPosition && (
-        <div className="mt-4 p-4 bg-white rounded border-2 border-gray-200">
-          <h3 className="text-xl font-bold text-green-800">
+        <div className="mt-4 p-4 bg-gray-50 rounded border-2 border-gray-50">
+          <h3 className="text-lg font-bold text-green-800">
             {positions.find((p) => p.id === selectedPosition).name}
             <span className="ml-2 text-gray-500">({selectedPosition})</span>
           </h3>
-          <p className="mt-2">{positions.find((p) => p.id === selectedPosition).info}</p>
+          <p className="mt-1 text-md font-light">
+            {positions.find((p) => p.id === selectedPosition).info}
+          </p>
         </div>
       )}
     </div>

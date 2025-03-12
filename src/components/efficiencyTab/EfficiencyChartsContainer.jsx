@@ -30,19 +30,19 @@ const EfficiencyChartsContainer = ({ summaryData }) => {
         {/* League filter buttons */}
         <div className="flex space-x-2">
           <button
-            className={`px-3 py-1 rounded ${leagueFilter === 'All' ? 'bg-blue-600 text-white' : 'bg-gray-200 text-gray-700'}`}
+            className={`px-4 py-2 mr-1 rounded ${leagueFilter === 'All' ? 'bg-gray-600 text-white' : 'bg-gray-200 text-gray-700'}`}
             onClick={() => setLeagueFilter('All')}
           >
             All Teams
           </button>
           <button
-            className={`px-3 py-1 rounded ${leagueFilter === 'AL' ? 'bg-blue-600 text-white' : 'bg-gray-200 text-gray-700'}`}
+            className={`px-4 py-2 mr-1 rounded ${leagueFilter === 'AL' ? 'bg-gray-600 text-white' : 'bg-gray-200 text-gray-700'}`}
             onClick={() => setLeagueFilter('AL')}
           >
             American League
           </button>
           <button
-            className={`px-3 py-1 rounded ${leagueFilter === 'NL' ? 'bg-blue-600 text-white' : 'bg-gray-200 text-gray-700'}`}
+            className={`px-4 py-2 mr-1 rounded ${leagueFilter === 'NL' ? 'bg-gray-600 text-white' : 'bg-gray-200 text-gray-700'}`}
             onClick={() => setLeagueFilter('NL')}
           >
             National League
