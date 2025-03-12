@@ -35,10 +35,12 @@ const EfficiencyTab = ({ summaryData, data }) => {
       </div>
 
       <div className="grid grid-cols-1 gap-6">
-        <TableauViz
-          vizUrl="https://public.tableau.com/views/MLBPayrollAllocationvsWins/PayrollAllocationvsWins"
-          height={500}
-        />
+        <div>
+          <TableauViz
+            vizUrl="https://public.tableau.com/views/MLBPayrollAllocationvsWins/PayrollAllocationvsWins"
+            height={500}
+          />
+        </div>
       </div>
     </div>
   );

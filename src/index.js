@@ -3,6 +3,9 @@ import { createRoot } from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import '@fontsource/open-sans'; // Defaults to weight 400
+import '@fontsource/open-sans/300.css'; // Optional: Light
+import '@fontsource/open-sans/600.css'; // Optional: Semi-Bold
 
 const container = document.getElementById('root');
 const root = createRoot(container);
