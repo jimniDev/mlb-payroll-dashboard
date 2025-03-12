@@ -4,9 +4,9 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        // sans: ['"Open Sans"', 'Helvetica', 'Arial', 'sans-serif'], // Default 'sans' now uses Open Sans
-        // // Optionally add custom names:
-        // open: ['"Open Sans"', 'Helvetica', 'Arial', 'sans-serif'],
+        sans: ['"Open Sans"', 'Helvetica', 'Arial', 'sans-serif'], // Default 'sans' now uses Open Sans
+        // Optionally add custom names:
+        open: ['"Open Sans"', 'Helvetica', 'Arial', 'sans-serif'],
       },
     },
   },
