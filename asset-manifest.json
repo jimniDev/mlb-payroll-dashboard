@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/mlb-payroll-dashboard/static/css/main.44fb364d.css",
-    "main.js": "/mlb-payroll-dashboard/static/js/main.af568cfa.js",
+    "main.css": "/mlb-payroll-dashboard/static/css/main.b9b93671.css",
+    "main.js": "/mlb-payroll-dashboard/static/js/main.29c36e16.js",
     "static/js/488.0162fb96.chunk.js": "/mlb-payroll-dashboard/static/js/488.0162fb96.chunk.js",
     "static/media/open-sans-latin-300-normal.woff2": "/mlb-payroll-dashboard/static/media/open-sans-latin-300-normal.6dacce4cff13d02117d6.woff2",
     "static/media/open-sans-latin-400-normal.woff2": "/mlb-payroll-dashboard/static/media/open-sans-latin-400-normal.feb0d8644aca3df9fabf.woff2",
@@ -64,12 +64,12 @@
     "static/media/open-sans-greek-ext-600-normal.woff": "/mlb-payroll-dashboard/static/media/open-sans-greek-ext-600-normal.a3b5e22c74f42fe17dfb.woff",
     "static/media/open-sans-greek-ext-300-normal.woff": "/mlb-payroll-dashboard/static/media/open-sans-greek-ext-300-normal.26c1e8d64660c5b342d6.woff",
     "index.html": "/mlb-payroll-dashboard/index.html",
-    "main.44fb364d.css.map": "/mlb-payroll-dashboard/static/css/main.44fb364d.css.map",
-    "main.af568cfa.js.map": "/mlb-payroll-dashboard/static/js/main.af568cfa.js.map",
+    "main.b9b93671.css.map": "/mlb-payroll-dashboard/static/css/main.b9b93671.css.map",
+    "main.29c36e16.js.map": "/mlb-payroll-dashboard/static/js/main.29c36e16.js.map",
     "488.0162fb96.chunk.js.map": "/mlb-payroll-dashboard/static/js/488.0162fb96.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.44fb364d.css",
-    "static/js/main.af568cfa.js"
+    "static/css/main.b9b93671.css",
+    "static/js/main.29c36e16.js"
   ]
 }
