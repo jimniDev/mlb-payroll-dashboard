@@ -80,29 +80,29 @@ const DashboardHeader = ({ activeTab, setActiveTab }) => {
         <div className="max-w-4xl mx-auto mt-4 sm:mt-8 justify-center">
           <div className="relative">
             <div className="flex flex-col md:flex-row items-center justify-center">
-              <h1 className="text-5xl sm:text-7xl md:text-[100px] leading-tight md:leading-[80px] font-extrabold text-[#383838] tracking-tight text-center md:text-left">
+              <h1 className="text-5xl sm:text-7xl md:text-[100px] leading-tight md:leading-[90px] font-extrabold text-[#383838] tracking-tight text-center md:text-left">
                 MLB
               </h1>
               <div className="font-light italic text-2xl sm:text-3xl md:text-4xl mx-auto md:mx-0 md:ml-5 mt-1 text-center md:text-left">
                 <div>2021</div>
                 <div>2024</div>
               </div>
-              <h1 className="text-5xl sm:text-7xl md:text-[100px] leading-tight md:leading-[80px] font-extrabold text-[#383838] tracking-tight text-center md:text-left md:ml-4">
+              <h1 className="text-5xl sm:text-7xl md:text-[100px] leading-tight md:leading-[90px] font-extrabold text-[#383838] tracking-tight text-center md:text-left md:ml-4">
                 SPENDING
               </h1>
             </div>
             <div className="flex flex-col md:flex-row items-center justify-center mt-2 md:mt-0">
-              <h1 className="text-6xl sm:text-8xl md:text-[120px] leading-tight md:leading-[80px] font-extrabold text-[#383838] tracking-tight text-center md:text-left">
+              <h1 className="text-6xl sm:text-8xl md:text-[120px] leading-tight md:leading-[100px] font-extrabold text-[#383838] tracking-tight text-center md:text-left">
                 EFFICI
               </h1>
-              <div className="flex items-center justify-center mx-2 my-2 md:my-0">
+              <div className="flex items-center justify-center mx-2 my-2 md:my-0 ">
                 <img
                   src="https://www.mlbstatic.com/team-logos/league-on-dark/1.svg"
                   alt="MLB Logo"
-                  className="w-32 sm:w-36 md:w-44 h-16 sm:h-20 md:h-24 object-contain"
+                  className="mt-2 w-32 sm:w-36 md:w-44 h-16 sm:h-20 md:h-24 object-contain"
                 />
               </div>
-              <h1 className="text-6xl sm:text-8xl md:text-[120px] leading-tight md:leading-[80px] font-extrabold text-[#383838] tracking-tight text-center md:text-left">
+              <h1 className="text-6xl sm:text-8xl md:text-[120px] leading-tight md:leading-[100px] font-extrabold text-[#383838] tracking-tight text-center md:text-left">
                 ENCY
               </h1>
             </div>
