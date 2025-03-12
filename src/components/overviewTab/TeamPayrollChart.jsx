@@ -11,6 +11,30 @@ import {
   ResponsiveContainer,
 } from 'recharts';
 import { formatMoney } from '../../utils/formatters';
+import { getTeamLogo } from '../../utils/teamColors';
+
+// Custom tooltip component with team logo
+const CustomTooltip = ({ active, payload, label, chartData }) => {
+  if (active && payload && payload.length) {
+    const team = chartData.find((item) => item.Team === label);
+
+    return (
+      <div className="custom-tooltip bg-white p-3 border border-gray-200 shadow-sm rounded">
+        <div className="flex items-center mb-1">
+          <img
+            src={getTeamLogo(team?.Team)}
+            alt={`${team?.['Team Name']} logo`}
+            className="w-6 h-6 object-contain mr-2"
+          />
+          <p className="font-bold">{team?.['Team Name']}</p>
+        </div>
+        <p className="text-sm">Total Payroll: {formatMoney(payload[0].value)}</p>
+        <p className="text-sm text-gray-500">{team?.['League (National or American)']}</p>
+      </div>
+    );
+  }
+  return null;
+};
 
 const TeamPayrollChart = ({ yearlyData, availableYears }) => {
   // Add local year state with default to latest year
@@ -62,11 +86,7 @@ const TeamPayrollChart = ({ yearlyData, availableYears }) => {
               stroke="#666"
             />
             <Tooltip
-              formatter={(value) => formatMoney(value)}
-              labelFormatter={(value) => {
-                const team = chartData.find((item) => item.Team === value);
-                return team ? team['Team Name'] : value;
-              }}
+              content={<CustomTooltip chartData={chartData} selectedYear={selectedYear} />}
               contentStyle={{ backgroundColor: '#fff', borderColor: '#ddd' }}
             />
             <Bar dataKey="Total Payroll Allocation" name="Total Payroll">

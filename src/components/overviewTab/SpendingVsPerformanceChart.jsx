@@ -12,7 +12,7 @@ import {
   LabelList,
   ResponsiveContainer,
 } from 'recharts';
-import { formatPayroll } from '../../utils/formatters';
+import { getTeamLogo } from '../../utils/teamColors';
 
 const SpendingVsPerformanceChart = ({ yearlyData, availableYears }) => {
   // Add local year state
@@ -77,6 +77,11 @@ const SpendingVsPerformanceChart = ({ yearlyData, availableYears }) => {
 
       return (
         <div className="custom-tooltip bg-white p-3 border border-gray-200 shadow-sm rounded">
+          <img
+            src={getTeamLogo(team?.Team)}
+            alt={`${team?.['Team Name']} logo`}
+            className="w-6 h-6 object-contain mr-2"
+          />
           <p className="font-bold">{team['Team Name']}</p>
           <p className="text-sm">
             Payroll: ${(team['Total Payroll Allocation'] / 1000000).toFixed(1)}M

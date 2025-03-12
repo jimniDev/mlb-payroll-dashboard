@@ -1,5 +1,6 @@
 // src/components/EfficiencyTab/EfficiencyStats.jsx
 import React from 'react';
+import { getTeamLogo } from '../../utils/teamColors';
 
 const EfficiencyStats = ({ avgLeaguePayroll, avgLeagueWins, avgLeagueCostPerWin, sortedTeams }) => {
   return (
@@ -27,7 +28,14 @@ const EfficiencyStats = ({ avgLeaguePayroll, avgLeagueWins, avgLeagueCostPerWin,
                 <span className="font-mono bg-gray-200 text-gray-800 px-2 py-1 rounded mr-2">
                   {index + 1}
                 </span>
-                <span>{team.team}</span>
+                <div className="flex items-center">
+                  <img
+                    src={getTeamLogo(team.teamCode)}
+                    alt={`${team.team} logo`}
+                    className="w-6 h-6 object-contain mr-2"
+                  />
+                  <span>{team.team}</span>
+                </div>
               </div>
               <div className="text-right">
                 <span className="font-semibold">

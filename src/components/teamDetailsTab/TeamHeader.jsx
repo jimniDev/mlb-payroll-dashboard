@@ -18,15 +18,17 @@ const TeamHeader = ({ teamData }) => {
           </div>
         </div>
       </div>
-      
+
       <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 mt-2">
         <div>
           <p className="text-sm text-gray-600">League/Division</p>
-          <p className="font-semibold">{teamData.league} {teamData.division.split(' ')[1]}</p>
+          <p className="font-semibold">
+            {teamData.league} {teamData.division.split(' ')[1]}
+          </p>
         </div>
         <div>
           <p className="text-sm text-gray-600">Avg Annual Payroll</p>
-          <p className="font-semibold">${(teamData.avgPayroll/1000000).toFixed(1)}M</p>
+          <p className="font-semibold">${(teamData.avgPayroll / 1000000).toFixed(1)}M</p>
         </div>
         <div>
           <p className="text-sm text-gray-600">Avg Wins</p>
@@ -34,7 +36,7 @@ const TeamHeader = ({ teamData }) => {
         </div>
         <div>
           <p className="text-sm text-gray-600">Avg Cost per Win</p>
-          <p className="font-semibold">${(teamData.avgCostPerWin/1000000).toFixed(2)}M</p>
+          <p className="font-semibold">${(teamData.avgCostPerWin / 1000000).toFixed(2)}M</p>
         </div>
         <div>
           <p className="text-sm text-gray-600 flex items-center">
