@@ -1,6 +1,14 @@
 // src/components/TeamDetailsTab/TeamEfficiencyChart.jsx
 import React from 'react';
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
+import {
+  LineChart,
+  Line,
+  XAxis,
+  YAxis,
+  CartesianGrid,
+  Tooltip,
+  ResponsiveContainer,
+} from 'recharts';
 
 const TeamEfficiencyChart = ({ teamData }) => {
   return (
@@ -10,28 +18,30 @@ const TeamEfficiencyChart = ({ teamData }) => {
         <ResponsiveContainer width="100%" height="100%">
           <LineChart
             data={teamData.payrollHistory}
-            margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
+            margin={{ top: 15, right: 30, left: 20, bottom: 5 }}
           >
             <CartesianGrid strokeDasharray="3 3" stroke="#f0f0f0" />
-            <XAxis 
-              dataKey="year" 
-              stroke="#666"
-            />
-            <YAxis 
+            <XAxis dataKey="year" stroke="#666" />
+            <YAxis
               tickFormatter={(value) => `${value}M`}
               stroke="#666"
-              label={{ value: 'Cost per Win (Millions $)', angle: -90, position: 'insideLeft', fill: "#666" }}
+              label={{
+                value: 'Cost per Win($)',
+                angle: -90,
+                position: 'insideLeft',
+                fill: '#666',
+              }}
             />
-            <Tooltip 
+            <Tooltip
               formatter={(value) => `${value.toFixed(2)}M`}
               labelFormatter={(year) => `${year}`}
-              contentStyle={{ backgroundColor: "#fff", borderColor: "#ddd" }}
+              contentStyle={{ backgroundColor: '#fff', borderColor: '#ddd' }}
             />
-            <Line 
-              type="monotone" 
-              dataKey="costPerWin" 
-              name="Cost per Win" 
-              stroke="#e15759" 
+            <Line
+              type="monotone"
+              dataKey="costPerWin"
+              name="Cost per Win"
+              stroke="#e15759"
               activeDot={{ r: 8 }}
               strokeWidth={2}
             />
