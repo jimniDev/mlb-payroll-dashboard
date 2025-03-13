@@ -93,7 +93,7 @@ const BaseballFieldDiagram = () => {
       abbr: 'DH',
       x: 630,
       y: 650,
-      info: 'Bats in place of the pitcher in the American League.',
+      info: 'Bats in place of the pitcher.',
     },
   ];
 
